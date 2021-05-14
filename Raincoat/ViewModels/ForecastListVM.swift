@@ -17,8 +17,6 @@ class ForecastListVM: ObservableObject {
     @Published var forecasts: [ForecastVM] = []
     @Published var current: CurrentVM?
     
-//    @AppStorage("location") var location: String = ""
-    
     @AppStorage("system") var system: Int = 0 {
         didSet {
             for i in 0..<forecasts.count {
@@ -29,10 +27,8 @@ class ForecastListVM: ObservableObject {
     let location: String
     
     init(location: String) {
-//        if location != "" {
         self.location = location
         getWeatherForecast(location: location)
-//        }
     }
     
     func getWeatherForecast(location: String) {
