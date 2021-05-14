@@ -107,24 +107,6 @@ struct DetailView: View {
             } else {
                 ProgressView()
             }
- 
-            
-//            if showButton {
-//                VStack {
-//                    Spacer()
-//                    Button(action: {
-//                        self.presentationMode.wrappedValue.dismiss()
-//                        store.addCity(location: cityName, city: city)
-//
-//                    }, label: {
-//                        Text("Add to Cities")
-//                            .foregroundColor(.white)
-//                            .frame(width: UIScreen.main.bounds.width * 2 / 3, height: 55)
-//                            .background(Color.blue.cornerRadius(10))
-//                            .padding()
-//                    })
-//                }
-//            } // Button
         }
         .navigationTitle(city.location)
     }

@@ -134,12 +134,9 @@ class MapViewVM: ObservableObject {
     @Published var mapRect = MKMapRect()
     
     init(coordinate: CLLocationCoordinate2D) {
-        
         initCoordinate(coordinate: coordinate)
-        
-        
-        
     }
+    
     
     func getCity(latitude: Double, longitude: Double) {
         let geoCoder = CLGeocoder()
@@ -163,9 +160,11 @@ class MapViewVM: ObservableObject {
         
     }
     
+    
     func initCoordinate(coordinate: CLLocationCoordinate2D) {
         self.coordinate = coordinate
     }
+    
     
     func createAnnotation() {
         let newLocation = MKPointAnnotation()
@@ -175,9 +174,6 @@ class MapViewVM: ObservableObject {
             self.locations.removeAll()
             self.locations.append(newLocation)
         }
-        
     }
-
-    
 }
 

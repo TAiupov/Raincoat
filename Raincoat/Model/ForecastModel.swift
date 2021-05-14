@@ -10,7 +10,6 @@ import UIKit
 
 
 let ApiKey: String = "4e59d0ee2b72f65c0d0cae71190dcc12"
-let sampleUrl: String = "https://api.openweathermap.org/data/2.5/onecall?lat=49.246292&lon=-123.116226&exclude=current,minutely,hourly,alerts&appid=719379ded279803a322f600e43fa7353"
 
 struct Forecast: Codable {
     struct Daily: Codable {
