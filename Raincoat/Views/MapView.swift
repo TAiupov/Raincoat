@@ -21,10 +21,8 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
-//        if annotations.count != view.annotations.count {
                 view.removeAnnotations(view.annotations)
                 view.addAnnotations(annotations)
-//            }
     }
     
     func makeCoordinator() -> Coordinator {
@@ -49,12 +47,6 @@ struct MapView: UIViewRepresentable {
             print(self.parent.mapView.centerCoordinate)
         }
         
-//        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//            let zoomWidth = mapView.visibleMapRect.size.width
-//            let zoomFactor = Int(log2(zoomWidth)) - 9
-//            DataManager.instance.zoom = zoomFactor
-//            print("...REGION DID CHANGE: ZOOM FACTOR \(zoomFactor)")
-//        }
         
         func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
             
@@ -65,7 +57,6 @@ struct MapView: UIViewRepresentable {
             self.parent = parent
             self.center = MapViewVM.instance.coordinate
             super.init()
-//            self.parent.mapView.setRegion(MKCoordinateRegion(center: DataManager.instance.coordinate, span: MKCoordinateSpan(latitudeDelta: DataManager.instance.coordinate.latitude, longitudeDelta: DataManager.instance.coordinate.longitude)), animated: true)
             
             self.parent.mapView.setVisibleMapRect(MKMapRect(origin: MKMapPoint(MapViewVM.instance.coordinate), size: MKMapSize(width: MapViewVM.instance.mapRect.width, height: MapViewVM.instance.mapRect.height)), animated: true)
             self.parent.mapView.setCenter(MapViewVM.instance.coordinate, animated: true)

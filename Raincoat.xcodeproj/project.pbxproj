@@ -21,8 +21,8 @@
 		CFAF141B2640A51000C5EF96 /* ForecastListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF141A2640A51000C5EF96 /* ForecastListVM.swift */; };
 		CFAF141D2640A6AD00C5EF96 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF141C2640A6AD00C5EF96 /* WeatherListView.swift */; };
 		CFD2EE80264B15C600019100 /* GlobalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2EE7E264B15C600019100 /* GlobalStore.swift */; };
-		CFD2EE81264B15C600019100 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2EE7F264B15C600019100 /* UIApplication+Extension.swift */; };
 		CFD2EE87264B49B700019100 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CFD2EE86264B49B700019100 /* SDWebImageSwiftUI */; };
+		CFEF05E1268558E800A5B35F /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEF05E0268558E800A5B35F /* UIApplication+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		CFAF141A2640A51000C5EF96 /* ForecastListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastListVM.swift; sourceTree = "<group>"; };
 		CFAF141C2640A6AD00C5EF96 /* WeatherListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListView.swift; sourceTree = "<group>"; };
 		CFD2EE7E264B15C600019100 /* GlobalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalStore.swift; sourceTree = "<group>"; };
-		CFD2EE7F264B15C600019100 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "../../../Apps/x016WeatherApp/x016WeatherApp/UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		CFEF05E0268558E800A5B35F /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			children = (
 				CF0C8FAD2626841A00DA248F /* RaincoatApp.swift */,
 				CFD2EE7E264B15C600019100 /* GlobalStore.swift */,
-				CFD2EE7F264B15C600019100 /* UIApplication+Extension.swift */,
+				CFEF05E0268558E800A5B35F /* UIApplication+Extension.swift */,
 				CFD2EE82264B168500019100 /* Views */,
 				CFD2EE83264B16A800019100 /* ViewModels */,
 				CFD2EE84264B16C200019100 /* Model */,
@@ -217,7 +217,7 @@
 				CFAF14142640A16200C5EF96 /* APIServiceCombine.swift in Sources */,
 				CF367C5826360A7300B31D11 /* MapView.swift in Sources */,
 				CF367C67263A5DB500B31D11 /* ForecastModel.swift in Sources */,
-				CFD2EE81264B15C600019100 /* UIApplication+Extension.swift in Sources */,
+				CFEF05E1268558E800A5B35F /* UIApplication+Extension.swift in Sources */,
 				CFAF141B2640A51000C5EF96 /* ForecastListVM.swift in Sources */,
 				CFAF14192640A4F200C5EF96 /* ForecastVM.swift in Sources */,
 				CF0C8FAE2626841A00DA248F /* RaincoatApp.swift in Sources */,

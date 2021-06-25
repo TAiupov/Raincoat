@@ -89,7 +89,7 @@ struct DetailView: View {
                     }
                     
                     VStack {
-                        Spacer()
+//                        Spacer()
                         Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
                             store.addCity(location: cityName, city: city)

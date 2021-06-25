@@ -25,40 +25,19 @@ struct HomeView: View {
         VStack(spacing: 0) {
             switch selection {
             case 0:
-                ZStack(alignment: .top) {
+                ZStack(alignment: .bottom) {
                     MapView(centerCoordinate: $centerCoordinate, annotations: vm.locations)
                     
                     if isShowingButton {
-                        VStack {
-                            Spacer()
-                            Button(action: {
-//                                    selection = 1
-//                                weatherVM.getWeatherForecast(coordinate: centerCoordinate)
-                                isShowingDetails.toggle()
-                            }, label: {
-                                Text("Show weather for: \(vm.city)")
-                                    .foregroundColor(.white)
-                                    .frame(height: 40)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color.gray)
-                                    .opacity(1.0)
-                                    .transition(.opacity)
-                                
-                            })
-                        }.transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.5)))
+                        detailsButton
+                            
                     }
                 }
-                .sheet(isPresented: $isShowingDetails, content: {
-                    DetailView(city: ForecastListVM(location: vm.city), showButton: true, cityName: vm.city).environmentObject(store)
-                })
-                
-                
-                
             default:
                 WeatherListView()
                     .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.5)))
             }
+            
             TabBarView(selection: $selection)
         }
         .edgesIgnoringSafeArea(.all)
@@ -68,5 +47,30 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+extension HomeView {
+    
+    private var detailsButton: some View {
+            Button(action: {
+                isShowingDetails.toggle()
+            }, label: {
+                Text("Show weather for: \(vm.city)")
+                    .foregroundColor(.white)
+                    .frame(height: 40)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.gray)
+                    .opacity(0.7)
+                    .transition(.opacity)
+            })
+            .sheet(isPresented: $isShowingDetails, content: {
+                DetailView(city: ForecastListVM(location: vm.city), showButton: true, cityName: vm.city).environmentObject(store)
+            })
+            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.5)))
+            
+                                
+        
     }
 }
